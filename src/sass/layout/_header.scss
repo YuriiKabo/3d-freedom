@@ -265,6 +265,63 @@
       display: none;
     }
   }
+  /* &__lang-link {
+    display: block;
+    font-family: 'Caviar Dreams';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28;
+    color: $lang-color;
+    transform: scale(100%);
+    transition-property: transform color;
+    @include trans();
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -6px;
+      right: 203px;
+    }
+    &:hover,
+    &:focus {
+      display: block;
+      transform: scale(110%);
+    }
+    &:active,
+    &:focus {
+      color: $main-font-color;
+    }
+  } */
+  /*------Перемикач мов Mob------ */
+
+  &__mob-radio-ch-label {
+    display: flex;
+    justify-content: center;
+    width: 28px;
+    font-family: 'Caviar Dreams';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28;
+    color: $lang-color;
+    transform: scale(100%);
+    transition-property: transform color;
+    @include trans();
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -6px;
+      right: 203px;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(110%);
+    }
+    &:active,
+    &:focus {
+      color: $main-font-color;
+    }
+  }
+  &__mob-radio-ch:checked + .header__mob-radio-ch-label {
+    display: none;
+  }
+  /* --- */
   &__mob-contact-open-button {
     @media (min-width: $tablet) {
       display: none;
@@ -356,32 +413,6 @@
       opacity: 100%;
       visibility: visible;
       pointer-events: all;
-    }
-  }
-
-  &__lang-link {
-    display: block;
-    font-family: 'Caviar Dreams';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.28;
-    color: $lang-color;
-    transform: scale(100%);
-    transition-property: transform color;
-    @include trans();
-    @media (min-width: $tablet) {
-      position: absolute;
-      top: -6px;
-      right: 203px;
-    }
-    &:hover,
-    &:focus {
-      display: block;
-      transform: scale(110%);
-    }
-    &:active,
-    &:focus {
-      color: $main-font-color;
     }
   }
 
@@ -501,9 +532,9 @@
   &__radio-ch:checked + .header__radio-ch-label {
     display: none;
   }
-
   /* --- */
-  &__desktop-lang-link {
+
+  /* &__desktop-lang-link {
     display: none;
     font-family: 'Caviar Dreams';
     font-weight: 400;
@@ -528,7 +559,7 @@
     &:focus {
       color: $main-font-color;
     }
-  }
+  } */
 }
 
 //* ------MOB Menu------ */
