@@ -358,6 +358,7 @@
       pointer-events: all;
     }
   }
+
   &__lang-link {
     display: block;
     font-family: 'Caviar Dreams';
@@ -458,6 +459,50 @@
     box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.1);
     border-radius: 72px 0px 0px 72px;
   }
+  /*------Перемикач мов------ */
+  &__hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  &__radio-ch-label {
+    display: none;
+    font-family: 'Caviar Dreams';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28;
+    color: $lang-color;
+    transform: scale(100%);
+    @include trans();
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 57px;
+      left: 59px;
+      width: 28px;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(110%);
+    }
+    &:active,
+    &:focus {
+      color: $main-font-color;
+    }
+  }
+  &__radio-ch:checked + .header__radio-ch-label {
+    display: none;
+  }
+
+  /* --- */
   &__desktop-lang-link {
     display: none;
     font-family: 'Caviar Dreams';
